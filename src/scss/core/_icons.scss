@@ -1,5 +1,17 @@
 $icons: (
-  menu: (36,25),
+  user: (28,28),
+  vk: (19,13),
+  facebook: (9,16),
+  inst: (16,16),
+  favorite: (23, 20),
+  arrow: (27, 13),
+  tel: (20, 20),
+  time: (20, 20),
+  map: (14, 20),
+  mail: (21,14),
+  vk_a: (19,13),
+  facebook_a: (9,16),
+  inst_a: (16,16),
 );
 
 %icon {
@@ -10,7 +22,6 @@ $icons: (
 }
 
 .ico {
-
   @extend %icon;
 }
 
@@ -19,11 +30,10 @@ $icons: (
     min-width: #{$width}px;
     height: #{$height}px;
     width: #{$width}px;
-    background-image: url("../img/icons/sprite.svg##{$name}");
+    background-image: url("../img/icons/#{$name}.png");
   }
 }
 
 @each $icon, $size in $icons {
-
   @include icon($icon, nth($size, 1), nth($size, 2));
 }

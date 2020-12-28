@@ -21,21 +21,32 @@
 
       </div>
       <div class="slider__arrow">
-        <a href="#" class="slider__arrow-left">
+        <button class="btn slider__arrow-left">
           <i class="ico ico-arrow"></i>
-        </a>
-        <a href="#" class="slider__arrow-right">
+        </button>
+        <button class="btn slider__arrow-right">
           <i class="ico ico-arrow"></i>
-        </a>
+        </button>
       </div>
+    </div>
+    <div class="products__social">
+      <a href="#" class="header__social-link" target="_blank">
+        <i class="ico ico-vk"></i>
+      </a>
+      <a href="#" class="header__social-link" target="_blank">
+        <i class="ico ico-facebook"></i>
+      </a>
+      <a href="#" class="header__social-link" target="_blank">
+        <i class="ico ico-inst"></i>
+      </a>
     </div>
   </div>
 </section>
 
-<section>
+<section class="products">
   <div class="wrapper">
     <h3 class="title">Наши новинки</h3>
-    <div class="products">
+    <div class="products__box">
       <div class="product">
         <a href="#" class="product__photo">
           <img src="img/6.png" alt="">
@@ -52,17 +63,16 @@
   </div>
 </section>
 
-<section>
+<section class="catalog">
   <div class="wrapper">
     <h3 class="title">Каталог товаров</h3>
-    <div class="catalog">
-      <a class="catalog__item">
-        <img src="img/1.png" alt="">
+    <div class="catalog__box">
+      <a href="#" class="catalog__item">
+        <img src="img/1.png" alt="" />
         <span class="catalog__item-link">Вибраторы</span>
       </a>
     </div>
   </div>
 </section>
-
 
 @@include('parts/footer.html')

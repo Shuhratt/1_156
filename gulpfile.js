@@ -98,31 +98,37 @@ function copyLibs (){
       .pipe(copy())
       .pipe(dest('dist/js'))
 }
+
+function copyIcons (){
+  return src('src/images/svg/**.png')
+      .pipe(copy())
+      .pipe(dest('dist/img/icons/'))
+}
 //
 
 
-config = {
-    shape: {
-        // spacing: { // Add padding
-        //     padding: 5
-        // },
-    },
-    mode: {
-        stack: {
-            sprite: "../icons/sprite.svg"  //sprite file name
-        }
-    },
-};
+// config = {
+//     shape: {
+//         // spacing: { // Add padding
+//         //     padding: 5
+//         // },
+//     },
+//     mode: {
+//         stack: {
+//             sprite: "../icons/sprite.svg"  //sprite file name
+//         }
+//     },
+// };
 
 
-function svgBuild() {
-    return src('src/images/svg/**.svg')
-        .pipe(svgSprite(config))
-        .on('error', function(error) {
-            done(error);
-        })
-        .pipe(dest('dist/img'))
-}
+// function svgBuild() {
+//     return src('src/images/svg/**.svg')
+//         .pipe(svgSprite(config))
+//         .on('error', function(error) {
+//             done(error);
+//         })
+//         .pipe(dest('dist/img'))
+// }
 
 // function imgMin() {
 //     return src('src/img/*.png')
@@ -155,11 +161,11 @@ function serve(){
     watch('src/**/*.html', series(html)).on('change', sync.reload)
     watch('src/scss/**/*.scss', series(scss)).on('change', sync.reload)
     watch('src/js/**.js', series(js)).on('change', sync.reload)
-    watch('src/images/svg/**.svg', series(svgBuild)).on('change', sync.reload)
+    watch('src/images/svg/**.png', series(copyIcons)).on('change', sync.reload)
 }
 
-exports.build = series(clear, clearCache, scss, svgBuild, copyImg, copyFavicons, copyFonts, copyLibs, html, js )
-exports.serve = series(clear, clearCache, scss, svgBuild, copyImg, copyFavicons, copyFonts, copyLibs, html, js, serve)
+exports.build = series(clear, clearCache, scss, copyIcons, copyImg, copyFavicons, copyFonts, copyLibs, html, js )
+exports.serve = series(clear, clearCache, scss, copyIcons, copyImg, copyFavicons, copyFonts, copyLibs, html, js, serve)
 
 exports.default = serve
 
