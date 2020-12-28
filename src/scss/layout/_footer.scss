@@ -1,0 +1,8 @@
+.footer {
+
+    @include mq('large-small', 'max') {
+      position: static;
+      text-align: center;
+    }
+
+}

@@ -1,0 +1,17 @@
+.header {
+
+  &__burg{
+    max-width: 70px;
+    flex: 0 0 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 5px;
+
+    @include mq('large-small', 'min') {
+      display: none;
+
+    }
+  }
+}

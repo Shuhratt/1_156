@@ -1,0 +1,68 @@
+$breadcrumb-divider: '/';
+$breadcrumb-divider-color: '#A3A2A9';
+$breadcrumb-item-padding: '3';
+$breadcrumb-active-color: '#FF8149';
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 0 17px;
+  border-bottom: 1px solid rgba(#d7e5e2, 0.36);
+  list-style: none;
+  margin-top: 0;
+  background-color: transparent;
+
+  @include mq('large', 'max') {
+    border-bottom-width: 2px;
+  }
+
+  @include mq('medium-small', 'max') {
+
+  }
+}
+
+.breadcrumb-item {
+  margin-right: 5px;
+
+  @include mq('large', 'max') {
+    margin-right: 3px;
+  }
+
+  a {
+    color: #{$breadcrumb-divider-color};
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+  }
+
+  + .breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: #{$breadcrumb-item-padding}px;
+    color: #{$breadcrumb-divider-color};
+    content: "#{$breadcrumb-divider}";
+
+    @include mq('large', 'max') {
+      padding-right: 3px;
+      padding-left: 3px;
+    }
+  }
+
+  + .breadcrumb-item:hover::before {
+    text-decoration: underline;
+  }
+
+  + .breadcrumb-item:hover::before {
+    text-decoration: none;
+  }
+
+  &.active {
+    color: #{$breadcrumb-active-color};
+
+    &::before {
+      //color: $orange;
+    }
+  }
+}

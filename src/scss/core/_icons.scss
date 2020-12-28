@@ -1,0 +1,29 @@
+$icons: (
+  menu: (36,25),
+);
+
+%icon {
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ico {
+
+  @extend %icon;
+}
+
+@mixin icon($name, $width, $height) {
+  .ico-#{$name} {
+    min-width: #{$width}px;
+    height: #{$height}px;
+    width: #{$width}px;
+    background-image: url("../img/icons/sprite.svg##{$name}");
+  }
+}
+
+@each $icon, $size in $icons {
+
+  @include icon($icon, nth($size, 1), nth($size, 2));
+}
