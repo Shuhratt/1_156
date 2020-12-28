@@ -1,9 +1,9 @@
 $white: #fff;
-$dark: #000;
-$base: #c40a0a;
+$dark: #312e50;
+$base: #bf3cb0;
 
 body {
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Comfortaa', cursive;
   font-style: normal;
   font-weight: normal;
   color: $dark;
@@ -27,21 +27,6 @@ body {
   }
 }
 
-[data-aos^=fade][data-aos^=fade]{
-  @include mq('large-small', 'max') {
-    opacity: 1;
-    transform: translate3d(0,0,0);
-  }
-
-}
-
-[data-aos^=flip][data-aos^=flip]{
-  @include mq('large-small', 'max') {
-    backface-visibility: visible;
-    transform: perspective(2500px) rotateX(0);
-  }
-}
-
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -58,18 +43,19 @@ main{
 .wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 100%;
+  max-width: 1170px;
+  padding: 0 15px;
 
   @include mq('desktop', 'min') {
-    max-width: 1240px;
+
   }
 
   @include mq('desktop-wide', 'min') {
-    max-width: 1440px;
+
   }
 
   @include mq('desktop-wide', 'max') {
-    padding: 0 15px;
+
   }
 
 }
@@ -213,15 +199,6 @@ b {
   //    }
   //}
   //
-  //&-icons {
-  //    li {
-  //        &::before {
-  //            background-image: url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5.96793L4.79421 11L14 1.36542L12.6784 0L4.79421 8.24995L1.30334 4.59289L0 5.96793Z' fill='%23FF8149'/%3E%3C/svg%3E%0A");
-  //            background-size: 14px 11px;
-  //            background-repeat: no-repeat;
-  //            background-position: center center;
-  //        }
-  //    }
   //}
 }
 
@@ -262,26 +239,7 @@ b {
 //     }
 // }
 
-.irs--round {
-  flex: 1;
-  margin-right: 36px;
-}
 
-.map {
-  margin-bottom: 8px;
-
-  @include mq('large', 'max') {
-    margin-bottom: 34px;
-  }
-
-  @include mq('medium-small', 'max') {
-    margin-bottom: 20px;
-  }
-
-  @include mq('phone-wide', 'max') {
-    margin-bottom: 5px;
-  }
-}
 
 //.modal {
 //  width: 100%;
