@@ -1,0 +1,23 @@
+.social_bl{
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-self: flex-start;
+  padding-left: calc((100vw - 1140px) / 2);
+}
+
+.products{
+
+
+  &__social{
+    display: flex;
+    align-items: center;
+    padding-top: 37px;
+    margin-bottom: 160px;
+
+
+    .header__social-link{
+      margin-right: 15px;
+    }
+  }
+}

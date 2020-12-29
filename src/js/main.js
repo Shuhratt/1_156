@@ -19,35 +19,33 @@ $(document).ready(function() {
 
     try {
 
-        $('.popular__slider').slick({
-            slidesToShow: 6,
-            slidesToScroll: 2,
-            dots: false,
+        $('.slider__boxing').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
             arrows: true,
-            prevArrow: $('.popular__slider-left'),
-            nextArrow: $('.popular__slider-right'),
+            prevArrow: $('.slider__arrow-left'),
+            nextArrow: $('.slider__arrow-right'),
             infinite: true,
-            centerMode: true,
-            variableWidth: false,
 
             responsive: [
                 {
                     breakpoint: 1370,
                     settings: {
-                      slidesToShow: 3,
+
                     }
                 },
                 {
                     breakpoint: 968,
                     settings: {
-                        slidesToShow: 2,
+
 
                     }
                 },
               {
                 breakpoint: 768,
                 settings: {
-                  slidesToShow: 1,
+
 
                 }
               }

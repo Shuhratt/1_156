@@ -1,5 +1,48 @@
 .header {
 
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 0;
+
+    &-link,
+    &-catalog {
+      font-size: 14px;
+      text-transform: uppercase;
+      line-height: 25px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      transition: color .15s ease;
+
+      &:hover,
+      &:active{
+        color: $base;
+      }
+
+      span{
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__logo{
+    font-size: 30px;
+    line-height: 24px;
+    color: $base;
+
+    img{
+      height: 20px;
+    }
+  }
+  &__social{
+
+    @include mq('large-small', 'min') {
+      display: none;
+    }
+  }
+
   &__burg{
     max-width: 70px;
     flex: 0 0 70px;

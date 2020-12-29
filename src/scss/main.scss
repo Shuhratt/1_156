@@ -1,23 +1,17 @@
 @import "../../node_modules/normalize.css/normalize";
 
 @import 'core/_mixins';
-
 @import 'core/_fonts';
-
 @import 'core/_reset';
-
 @import 'core/_core';
-
 @import 'core/_icons';
-
 @import 'core/_slick';
-
 @import 'core/_btn';
-
 @import 'core/_bread';
-
 @import 'core/_animations';
 
 @import 'layout/_header';
-
 @import 'layout/_footer';
+
+@import 'blocks/_slider';
+@import 'blocks/_products';

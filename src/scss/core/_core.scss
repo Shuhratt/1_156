@@ -35,10 +35,6 @@ html {
     overflow: hidden;
   }
 }
-main{
-  display: flex;
-  flex-direction: column;
-}
 
 .wrapper {
   margin: 0 auto;
@@ -254,29 +250,16 @@ b {
 
 .title {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 36px;
   color: $dark;
-  text-align: left;
+  text-align: center;
   width: 100%;
-  margin: 0;
-  display: flex;
-  align-items: center;
+  margin: 0 0 74px ;
 
   @include mq('large-small', 'max') {
-    font-size: 20px;
+    font-size: 28px;
   }
 
-  &::after {
-    content: "";
-    display: inline-block;
-    height: 1px;
-    width: 100%;
-    max-width: 100px;
-    background-color: $dark;
-    margin-left: 85/1410 * 100%;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
 }
 
 .form-control {

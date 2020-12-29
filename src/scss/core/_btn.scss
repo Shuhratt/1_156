@@ -18,17 +18,18 @@
   background-color: transparent;
 
   &-primary {
-    border-radius: 0;
+    border-radius: 50px;
     width: 100%;
     background-color: $base;
-    max-width: 459px;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 1;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
     text-align: center;
-    height: 64px;
+    height: 63px;
     color: $white;
     position: relative;
+    box-shadow: 0 3px #74306c;
+    font-family: 'Montserrat', sans-serif;
 
     @include mq('large-small', 'max') {
       font-size: 18px;
@@ -41,7 +42,7 @@
 
     &:hover,
     &:focus {
-      background-color: #890808;
+      background-color: #74306c;
 
       //svg{
       //
@@ -49,14 +50,6 @@
       //        fill: $dark
       //    }
       //}
-    }
-
-    .ico {
-      position: absolute;
-      right: 40px;
-      top: 0;
-      bottom: 0;
-      margin: auto 0;
     }
   }
 
