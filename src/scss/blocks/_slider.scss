@@ -52,6 +52,10 @@
         text-decoration: underline;
         color: #a2a1a7;
 
+        &:hover,
+        &:active {
+          text-decoration: none;
+        }
 
       }
 

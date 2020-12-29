@@ -1,8 +1,139 @@
 .footer {
+  background-color: #f8f7f8;
+  margin-top: 30px;
+
+  @include mq('large-small', 'max') {
+    margin-top: 15px;
+  }
+
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0 60px;
 
     @include mq('large-small', 'max') {
-      position: static;
-      text-align: center;
+      flex-direction: column;
     }
+  }
+
+  &__col{
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @include mq('large-small', 'max') {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+    .ico{
+      margin-right: 10px;
+    }
+
+    &-text{
+      font-size: 14px;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+    }
+
+  }
+
+  &__logo{
+    font-size: 30px;
+    line-height: 24px;
+    color: $base;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+
+    img {
+      height: 22px;
+    }
+  }
+
+  &__social{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-text{
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+
+    }
+
+    &-link{
+      margin-left: 15px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #696969;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 165px;
+    width: 100%;
+    margin: 0;
+  }
+
+  &__copy{
+    margin-top: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #696969;
+  }
+
+  &__menu{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &-link{
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      color: #696969;
+      margin-bottom: 20px;
+      transition: color .15s ease;
+
+      &:hover,
+      &:active{
+        color: $base;
+      }
+    }
+  }
+
+  &__pay{
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    height: 22px;
+
+    img{
+      max-height: 22px;
+      margin: auto;
+
+      &:first-child{
+        position: relative;
+        top: -5px;
+      }
+
+      &:last-child{
+        padding-left: 10px;
+      }
+    }
+  }
+
 
 }
