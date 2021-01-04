@@ -31,7 +31,7 @@
     font-family: 'Montserrat', sans-serif;
 
     @include mq('large-small', 'max') {
-      font-size: 18px;
+      //font-size: 18px;
     }
 
     &:focus,

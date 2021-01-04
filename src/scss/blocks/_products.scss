@@ -8,10 +8,6 @@
 
 .products {
 
-  @include mq('large-small', 'max') {
-    margin-top: 100px;
-  }
-
   &__box{
     display: flex;
     flex-wrap: wrap;
@@ -43,9 +39,60 @@
   &__link{
     max-width: 231px;
     margin: 8px auto 15px;
+    font-size: 14px;
+
+    @include mq('large-small', 'max') {
+      margin: 10px auto 30px;
+    }
 
     .ico{
       margin-left: 10px;
+    }
+  }
+
+  &__nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include mq('large-small', 'max') {
+      justify-content: center;
+      margin-bottom: 60px;
+    }
+
+    &-count{
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      color: #898989;
+      margin-right: 10px;
+
+      span{
+        color: $base;
+      }
+
+    }
+
+    &-links{
+      display: flex;
+
+      &-el{
+        width: 29px;
+        height: 29px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $base;
+        transition:  background-color .15s ease-in-out;
+
+        &:hover,
+        &:active{
+          background-color: #83327a;
+        }
+
+
+      }
+
     }
   }
 }

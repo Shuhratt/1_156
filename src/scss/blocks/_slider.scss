@@ -5,6 +5,7 @@
 
   @include mq('large-small', 'max') {
     height: auto;
+    margin-bottom: 100px;
   }
 
   &__box{

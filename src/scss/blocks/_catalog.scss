@@ -47,7 +47,6 @@ $width_first: 360/1140 * 100%;
       }
     }
 
-
     @for $i from 1 through 8 {
       &:nth-child(#{$i}){
         grid-area: post-#{$i}

@@ -73,91 +73,87 @@
     </nav>
 </header>
 
-<section class="products">
+<section class="contact">
   <div class="wrapper">
-    <h3 class="title title_left title_alone">Наши новинки</h3>
-    <div class="products__box">
-      <div class="product">
-        <a href="#" class="product__photo">
-          <img src="img/6.png" alt="" />
-        </a>
-        <a href="#" class="product__title">Вибромассажер Satisfyer Lovely Honey</a>
-        <div class="product__bottom">
-          <span class="product__bottom-price">4530 ₽</span>
-          <button class="btn product__bottom-favorite">
-            <i class="ico ico-favorite"></i>
-          </button>
+    <h3 class="title title_left title_alone">Контакты</h3>
+    <div class="contact__box">
+      <div class="contact__box-info">
+        <div class="footer__row">
+          <i class="ico ico-tel"></i>
+          <a class="footer__row-text" href="tel:79999999999">+ 7 (999) 999 99 99</a>
+        </div>
+        <div class="footer__row">
+          <i class="ico ico-time"></i>
+          <span class="footer__row-text">Пн-Пт: 10:00 - 18:00, Сб: 10:00 - 15:00</span>
+        </div>
+        <div class="footer__row">
+          <i class="ico ico-map"></i>
+          <address class="footer__row-text">Москва, Радужная, дом 12, офис 209</address>
+        </div>
+        <div class="footer__row">
+          <i class="ico ico-mail"></i>
+          <a href="mailto:1235@mail.ru" class="footer__row-text">1235@mail.ru</a>
+        </div>
+        <div class="footer__social">
+          <span class="footer__social-text">Присоединяйтесь к нам в соц.сетях:</span>
+          <a href="#" target="_blank" class="footer__social-link">
+            <i class="ico ico-vk_a"></i>
+          </a>
+          <a href="#" target="_blank" class="footer__social-link">
+            <i class="ico ico-facebook_a"></i>
+          </a>
+          <a href="#" target="_blank" class="footer__social-link">
+            <i class="ico ico-inst_a"></i>
+          </a>
         </div>
       </div>
-      <div class="product">
-        <a href="#" class="product__photo">
-          <img src="img/6.png" alt="" />
-        </a>
-        <a href="#" class="product__title">Вибромассажер Satisfyer Lovely Honey</a>
-        <div class="product__bottom">
-          <span class="product__bottom-price">4530 ₽</span>
-          <button class="btn product__bottom-favorite">
-            <i class="ico ico-favorite"></i>
-          </button>
-        </div>
-      </div>
-      <div class="product">
-        <a href="#" class="product__photo">
-          <img src="img/6.png" alt="" />
-        </a>
-        <a href="#" class="product__title">Вибромассажер Satisfyer Lovely Honey</a>
-        <div class="product__bottom">
-          <span class="product__bottom-price">4530 ₽</span>
-          <button class="btn product__bottom-favorite">
-            <i class="ico ico-favorite"></i>
-          </button>
-        </div>
-      </div>
-      <div class="product">
-        <a href="#" class="product__photo">
-          <img src="img/6.png" alt="" />
-        </a>
-        <a href="#" class="product__title">Вибромассажер Satisfyer Lovely Honey</a>
-        <div class="product__bottom">
-          <span class="product__bottom-price">4530 ₽</span>
-          <button class="btn product__bottom-favorite">
-            <i class="ico ico-favorite"></i>
-          </button>
-        </div>
-      </div>
-      <div class="product">
-        <a href="#" class="product__photo">
-          <img src="img/6.png" alt="" />
-        </a>
-        <a href="#" class="product__title">Вибромассажер Satisfyer Lovely Honey</a>
-        <div class="product__bottom">
-          <span class="product__bottom-price">4530 ₽</span>
-          <button class="btn product__bottom-favorite">
-            <i class="ico ico-favorite"></i>
-          </button>
-        </div>
+      <div class="contact__box-map">
+        <div id="map" style="width: 100%; height: 295px;"></div>
       </div>
     </div>
-    <a href="#" class="products__link btn btn-primary">
-      <span>Слудующая</span>
-      <i class="ico ico-arrow_w"></i>
-    </a>
-    <nav class="products__nav">
-      <div class="products__nav-count">
-        <span>1</span> из 12
-      </div>
-      <div class="products__nav-links">
-        <a href="#" class="products__nav-links-el">
-          <i class="ico ico-arrow_wl"></i>
-        </a>
-        <a href="#" class="products__nav-links-el">
-          <i class="ico ico-arrow_wr"></i>
-        </a>
-      </div>
-    </nav>
   </div>
 </section>
 
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+  ymaps.ready(init);
+
+  function init() {
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+          center: [55.751574, 37.573856],
+          zoom: 9
+        }, {
+          searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          hintContent: 'Собственный значок метки',
+          balloonContent: 'Это красивая метка'
+        }, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Своё изображение иконки метки.
+          iconImageHref: 'img/icons/map2.png',
+          // Размеры метки.
+          iconImageSize: [28, 37],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-5, -38]
+        });
+
+      myMap.geoObjects
+              .add(myPlacemark)
+    });
+  }
+
+</script>
   <footer class="footer">
     <div class="wrapper">
       <div class="footer__box">
