@@ -28,10 +28,11 @@
   <meta property="og:url" content= "" />
 
   <!-- STYLE -->
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">-->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="header header_home">
+<header class="header">
   <div class="wrapper">
     <nav class="header__box">
       <a href="#" class="header__box-catalog">
@@ -72,72 +73,9 @@
     </nav>
 </header>
 
-<section class="slider">
-  <div class="wrapper">
-    <div class="slider__box">
-      <div class="slider__boxing">
-        <div class="slider__item">
-          <div class="slider__item-info">
-            <h2 class="slider__item-title">Твоё право на удовольствие</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus</p>
-            <a href="#" class="slider__item-link btn btn-primary">в каталог</a>
-          </div>
-          <div class="slider__item-pic">
-            <div class="slider__item-pic-img" style="background-image: url('img/5.png')"></div>
-            <div class="slider__item-pic-price">
-              <a href="#" class="slider__item-pic-name">Вибромассажер Satisfyer Lovely Honey</a>
-              <span class="slider__item-pic-price-count">4530 ₽</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slider__item">
-          <div class="slider__item-info">
-            <h2 class="slider__item-title">Твоё право на удовольствие</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus</p>
-            <a href="#" class="slider__item-link btn btn-primary">в каталог</a>
-          </div>
-          <div class="slider__item-pic">
-            <div class="slider__item-pic-img" style="background-image: url('../img/5.png')"></div>
-            <div class="slider__item-pic-price">
-              <a href="#" class="slider__item-pic-name">Вибромассажер Satisfyer Lovely Honey</a>
-              <span class="slider__item-pic-price-count">4530 ₽</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="slider__arrow">
-        <button class="btn slider__arrow-left">
-          <i class="ico ico-arrow"></i>
-        </button>
-        <button class="btn slider__arrow-right">
-          <i class="ico ico-arrow"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="social_bl">
-  <div class="wrapper">
-    <div class="products__social">
-      <a href="#" class="header__social-link" target="_blank">
-        <i class="ico ico-vk"></i>
-      </a>
-      <a href="#" class="header__social-link" target="_blank">
-        <i class="ico ico-facebook"></i>
-      </a>
-      <a href="#" class="header__social-link" target="_blank">
-        <i class="ico ico-inst"></i>
-      </a>
-    </div>
-  </div>
-</section>
-
-
 <section class="products">
   <div class="wrapper">
-    <h3 class="title">Наши новинки</h3>
+    <h3 class="title title_left title_alone">Наши новинки</h3>
     <div class="products__box">
       <div class="product">
         <a href="#" class="product__photo">
@@ -200,48 +138,23 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="catalog">
-  <div class="wrapper">
-    <h3 class="title">Каталог товаров</h3>
-    <div class="catalog__box">
-      <a href="#" class="catalog__item">
-        <img src="img/1.png" alt="" />
-        <span class="catalog__item-link">Вибраторы</span>
-      </a>
-      <a href="#" class="catalog__item">
-        <img src="img/2.png" alt="" />
-        <span class="catalog__item-link">Презервативы</span>
-      </a>
-      <a href="#" class="catalog__item">
-        <img src="img/3.png" alt="" />
-        <span class="catalog__item-link">Лубриканты</span>
-      </a>
-      <a href="#" class="catalog__item">
-        <img src="img/4.png" alt="" />
-        <span class="catalog__item-link">Анальные стимуляторы</span>
-      </a>
-
-      <a href="#" class="catalog__item">
-        <img src="img/2.png" alt="" />
-        <span class="catalog__item-link">Презервативы</span>
-      </a>
-      <a href="#" class="catalog__item">
-        <img src="img/3.png" alt="" />
-        <span class="catalog__item-link">Лубриканты</span>
-      </a>
-      <a href="#" class="catalog__item">
-        <img src="img/4.png" alt="" />
-        <span class="catalog__item-link">Анальные стимуляторы</span>
-      </a>
-      <a href="#" class="catalog__item">
-        <img src="img/1.png" alt="" />
-        <span class="catalog__item-link">Вибраторы</span>
-      </a>
-
-    </div>
+    <a href="#" class="products__link btn btn-primary">
+      <span>Слудующая</span>
+      <i class="ico ico-arrow_w"></i>
+    </a>
+    <nav class="products__nav">
+      <div class="products__nav-count">
+        <span>1</span> из 12
+      </div>
+      <div class="products__nav-count-links">
+        <a href="#" class="products__nav-count-links-el">
+          <i class="ico ico-arrow_wl"></i>
+        </a>
+        <a href="#" class="products__nav-count-links-el">
+          <i class="ico ico-arrow_wr"></i>
+        </a>
+      </div>
+    </nav>
   </div>
 </section>
 

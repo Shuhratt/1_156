@@ -254,11 +254,24 @@ b {
   color: $dark;
   text-align: center;
   width: 100%;
-  margin: 0 0 74px ;
+  margin: 0 0 74px;
 
   @include mq('large-small', 'max') {
     font-size: 28px;
   }
+
+  &_left{
+    text-align: left;
+  }
+
+  &_alone {
+    margin: 90px 0 70px;
+
+    @include mq('large-small', 'max') {
+      margin: 60px 0 30px;
+    }
+  }
+
 
 }
 

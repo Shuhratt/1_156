@@ -1,4 +1,9 @@
 .header {
+  background-color: #faf7f9;
+
+  &_home{
+    background-color: transparent;
+  }
 
   &__box{
     display: flex;
