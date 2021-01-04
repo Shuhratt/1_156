@@ -105,12 +105,127 @@
 
   &-item{
 
+    &__box{
+      margin-bottom: 110px;
+
+      @include mq('large-small', 'max') {
+        margin-bottom: 60px;
+      }
+    }
+
+    &__head{
+      margin: 100px 0 35px;
+      display: flex;
+      justify-content: space-between;
+
+      @include mq('large-small', 'max') {
+        margin: 60px 0 30px;
+        flex-direction: column;
+      }
+    }
+
+    &__content{
+
+      p{
+        font-size: 16px;
+        line-height: 21px;
+        color: #696969;
+        font-family: 'Montserrat', sans-serif;
+
+        @include mq('large-small', 'max') {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &__img{
+      max-width: 555px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 25px;
+      float: left;
+      margin-right: 30px;
+      margin-bottom: 15px;
+      width: 100%;
+
+      @include mq('large-small', 'max') {
+        float: none;
+        margin-right: 0;
+      }
+
+      &:nth-of-type(2n){
+        float: right;
+        margin-right: 0;
+        margin-left: 30px;
+        margin-bottom: 15px;
+
+        @include mq('large-small', 'max') {
+          margin-left: 0;
+          float: none;
+        }
+      }
+    }
+
+    &__right{
+      display: flex;
+      align-items: center;
+    }
+
+    &__title{
+      font-size: 24px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      color: #696969;
+      margin: 0;
+
+      @include mq('large-small', 'max') {
+        margin: 0 0 15px;
+        font-size: 18px;
+      }
+    }
+
     &__bottom{
       padding-top: 30px;
       border-top: 1px solid $base;
       margin-top: 70px;
       display: flex;
       align-items: center;
+      width: 100%;
+
+      @include mq('large-small', 'max') {
+        justify-content: space-between;
+      }
+
+      &-user{
+        display: flex;
+        white-space: pre-wrap;
+        font-size: 16px;
+        line-height: 21px;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+
+        &-text{
+          color: #696969;
+        }
+
+        &-link{
+          color: $base;
+          margin-left: 5px;
+
+          &:hover,
+          &:active{
+            text-decoration: underline;
+          }
+
+        }
+
+      }
+
+      &-like{
+        margin-left: 40px;
+      }
+
     }
   }
+
 }

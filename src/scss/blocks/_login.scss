@@ -1,0 +1,32 @@
+.login{
+
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0 120px;
+
+    @include mq('large-small', 'max') {
+      flex-direction: column;
+      padding: 60px 0;
+    }
+
+  }
+
+  &__container{
+    width: 100%;
+    max-width: 555/1140 * 100%;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 24px rgba(#dbdbdb, .39);
+    padding: 50px 0;
+
+    @include mq('large-small', 'max') {
+      max-width: 100%;
+
+      &:first-child{
+        margin-bottom: 60px;
+      }
+    }
+
+  }
+}
