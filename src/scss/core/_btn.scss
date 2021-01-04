@@ -52,43 +52,47 @@
     }
   }
 
-  //&-secondary {
-  //    border: 1px solid #f5f5f5;
-  //    box-shadow: 0 8px 6px -8px #cfcfcf, 0 15px 51px -26px #adadad;
-  //    background: $white;
-  //    width: 100%;
-  //    font-weight: bold;
-  //    font-size: 18px;
-  //    line-height: 24px;
-  //    text-align: center;
-  //    height: 64px;
-  //    position: relative;
-  //    //max-width: 240px;
-  //    padding: 0 30px;
-  //
-  //    svg {
-  //        margin-left: 16px;
-  //
-  //        path {
-  //            transition: fill 0.25s;
-  //        }
-  //    }
-  //
-  //    &:focus,
-  //    &:active:focus {
-  //        //box-shadow: 0 0 0 0.2rem rgba($orange, 0.25);
-  //    }
-  //
-  //    //&:hover, &:focus{
-  //    //    //background: #c1c1c1;
-  //    //    //color: $dark;
-  //    //
-  //    //    svg{
-  //    //
-  //    //        path{
-  //    //
-  //    //        }
-  //    //    }
-  //    //}
-  //}
+  &-secondary {
+    border: 1px solid $base;
+    //box-shadow: 0 8px 6px -8px #cfcfcf, 0 15px 51px -26px #adadad;
+    background: $white;
+    width: 100%;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21px;
+    text-align: center;
+    height: 40px;
+    position: relative;
+    padding: 0 20px;
+    color: $base;
+    border-radius: 50px;
+
+    .ico{
+      margin-left: 10px;
+    }
+    //svg {
+    //    margin-left: 16px;
+    //
+    //    path {
+    //        transition: fill 0.25s;
+    //    }
+    //}
+
+    &:focus,
+    &:active:focus {
+        box-shadow: 0 0 0 0.2rem rgba($base, 0.25);
+    }
+
+    //&:hover, &:focus{
+    //    //background: #c1c1c1;
+    //    //color: $dark;
+    //
+    //    svg{
+    //
+    //        path{
+    //
+    //        }
+    //    }
+    //}
+  }
 }
