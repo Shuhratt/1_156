@@ -13,6 +13,7 @@
 
     @include mq('large-small', 'max') {
       flex-direction: column;
+      padding: 27px 0 30px;
     }
   }
 
@@ -24,7 +25,7 @@
     @include mq('large-small', 'max') {
       width: 100%;
       max-width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
   }
 
@@ -67,6 +68,10 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 500;
       margin-right: auto;
+
+      @include mq('large-small', 'max') {
+        margin-right: 0;
+      }
     }
 
     &-link{
@@ -119,9 +124,17 @@
     align-items: center;
     height: 22px;
 
+    @include mq('large-small', 'max') {
+      justify-content: flex-start;
+    }
+
     img{
       max-height: 22px;
       margin: auto;
+
+      @include mq('large-small', 'max') {
+        margin: 10px;
+      }
 
       &:first-child{
         position: relative;
