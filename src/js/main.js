@@ -12,6 +12,13 @@ $(document).ready(function() {
     }
   });
 
+  $('.quest-row').each( function (i, el)  {
+    $(el).on('click', function (e) {
+      $('.quest-row').removeClass('active');
+      $(this).addClass('active')
+    });
+  })
+
   $(document).on('click', '.header__top-box-close', function (e) {
     $('.header__top').removeClass('active');
     $('html, body').removeClass('hidden');
