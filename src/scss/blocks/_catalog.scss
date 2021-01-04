@@ -1,0 +1,54 @@
+$width_first: 360/1140 * 100%;
+
+.catalog{
+  margin-top: 90px;
+  margin-bottom: 90px;
+
+  &__box{
+    display: grid;
+    grid-template-columns: $width_first $width_first $width_first;
+    grid-template-rows: 307px 307px;
+    grid-template-areas:  "post-1 post-2 post-3"
+                          "post-1 post-4 post-4"
+                          "post-5 post-6 post-8"
+                          "post-7 post-7 post-8";
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+
+  &__item{
+    background-color: #faf6f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(#dbdbdb, .39);
+    display: flex;
+    flex-direction: column;
+
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}){
+        grid-area: post-#{$i}
+      }
+    }
+
+    img {
+      width: auto;
+      margin: 0 auto;
+    }
+
+    &-link{
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 40px;
+      transition: color .15s ease-in-out;
+
+      &:hover,
+      &:active{
+        color: $base;
+      }
+
+    }
+
+  }
+
+}

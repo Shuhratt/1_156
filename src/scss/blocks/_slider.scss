@@ -23,6 +23,17 @@
       bottom: -80px;
       left: 0;
       right: 0;
+
+      @include mq('large-small', 'max') {
+        bottom: -55px;
+        z-index: 9;
+        width: auto;
+        margin: auto;
+        left: 50%;
+        right: inherit;
+        transform: translateX(-50%);
+      }
+
     }
   }
 
@@ -101,6 +112,8 @@
 
       @include mq('large-small', 'max') {
         max-width: 100%;
+        padding-top: 100px;
+        padding-bottom: 60px;
       }
 
       p{
@@ -112,6 +125,7 @@
         @include mq('large-small', 'max') {
           text-align: center;
           font-size: 16px;
+          color: #7b7b82;
         }
       }
 
@@ -152,6 +166,11 @@
     position: absolute;
     bottom: -50px;
     right: 0;
+
+    @include mq('large-small', 'max') {
+      width: 100%;
+      justify-content: space-between;
+    }
 
     &-left{
       transform: rotate(180deg);

@@ -6,6 +6,10 @@
     align-items: center;
     padding: 27px 0;
 
+    @include mq('large-small', 'max') {
+      justify-content: flex-start;
+    }
+
     &-link,
     &-catalog {
       font-size: 14px;
@@ -16,6 +20,14 @@
       align-items: center;
       transition: color .15s ease;
 
+      @include mq('large-small', 'max') {
+
+        &:not(.header__box-link-user){
+          display: none;
+        }
+
+      }
+
       &:hover,
       &:active{
         color: $base;
@@ -23,6 +35,20 @@
 
       span{
         margin-left: 20px;
+      }
+
+      &-user{
+
+        @include mq('large-small', 'max') {
+          margin-left: 40px;
+        }
+
+        span{
+
+          @include mq('large-small', 'max') {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -37,25 +63,37 @@
       height: 20px;
     }
   }
+
   &__social{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
 
     @include mq('large-small', 'min') {
       display: none;
     }
+
+    &-link{
+      margin-left: 15px;
+    }
+
   }
 
   &__burg{
-    max-width: 70px;
-    flex: 0 0 70px;
+    max-width: inherit;
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     top: 5px;
+    margin-left: 40px;
 
     @include mq('large-small', 'min') {
       display: none;
 
+
     }
   }
+
 }

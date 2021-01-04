@@ -8,6 +8,10 @@
 
 .products {
 
+  @include mq('large-small', 'max') {
+    margin-top: 100px;
+  }
+
   &__box{
     display: flex;
     flex-wrap: wrap;
@@ -27,6 +31,9 @@
     padding-top: 37px;
     margin-bottom: 120px;
 
+    @include mq('large-small', 'max') {
+      display: none;
+    }
 
     .header__social-link{
       margin-right: 15px;
