@@ -62,39 +62,41 @@ a {
   display: block;
 }
 
-input[type=radio],
-input[type=checkbox] {
-  border: 1px solid $base;
+input[type=radio], input[type=checkbox] {
   cursor: pointer;
   line-height: 0;
-  height: rem(22px);
+  height: rem(20px);
   outline: 0;
-  padding: 0 !important;
+  padding: 0!important;
   text-align: center;
   vertical-align: middle;
-  width: rem(22px) !important;
-  min-width: rem(22px);
+  width: rem(20px)!important;
+  min-width: rem(20px);
   appearance: none;
-  transition: 0.05s border-color ease-in-out;
+  transition: .05s border-color ease-in-out;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0;
+  border: 1px solid #cbcbcb;
+  border-radius: 5px;
+  margin: 0;
 
-  &:checked {
+  &:checked{
     border-color: $base;
 
-    &::before {
+    &:before{
       content: "";
-      width: 11px;
-      height: 8px;
-      display: block;
-      background-position: 0 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='100%' height='100%' viewBox='0 0 209 209' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M154.984 0C173.565 0 180.303 1.93151 187.097 5.55863C193.889 9.18563 199.22 14.5082 202.853 21.2902C206.487 28.0721 208.421 34.7992 208.421 53.3502V154.733C208.421 173.285 206.487 180.012 202.853 186.793C199.22 193.575 193.889 198.898 187.097 202.524C180.303 206.152 173.565 208.084 154.984 208.084H53.4368C34.8557 208.084 28.1177 206.152 21.3247 202.524C14.5316 198.898 9.20054 193.575 5.5676 186.793C1.93468 180.012 0 173.285 0 154.733V53.3502C0 34.7992 1.93468 28.0721 5.5676 21.2902C9.20054 14.5082 14.5316 9.18563 21.3247 5.55863C28.1177 1.93151 34.8557 0 53.4368 0H154.984ZM169.792 58.9748C165.759 55.0924 159.374 55.0879 155.336 58.9646L83.3685 128.051L53.0589 98.987C49.0309 95.1243 42.6691 95.1189 38.6344 98.9745L38.5579 99.0476C38.4616 99.1395 38.3672 99.2335 38.2749 99.3294C34.5649 103.18 34.6837 109.304 38.5403 113.008L76.147 149.127C80.1803 153.001 86.558 153.002 90.593 149.13L169.852 73.0769C169.941 72.9915 170.028 72.9042 170.115 72.8154C173.854 68.9432 173.741 62.7774 169.863 59.0436L169.792 58.9748Z' fill='%23BF3CB0'/%3E%3C/svg%3E%0A");      background-size: cover;
+      background-position: center center;
       background-repeat: no-repeat;
-      background-size: cover;
-      background-image: url("data:image/svg+xml,%3Csvg width='512' height='376' viewBox='0 0 512 376' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M450.585 0.551758L198.52 252.617L61.415 115.513L0 176.928L198.52 375.448L512 61.9678L450.585 0.551758Z' fill='%23C40A0A'/%3E%3C/svg%3E%0A");
+      min-width: rem(20px);
+      height: rem(20px);
+      display: block;
     }
   }
+
+
+
 }
 
 b {
@@ -270,6 +272,10 @@ b {
     @include mq('large-small', 'max') {
       margin: 60px 0 30px;
     }
+  }
+
+  &_nomargin{
+    margin-bottom: 20px;
   }
 }
 

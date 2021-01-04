@@ -1,0 +1,83 @@
+@@include('parts/header.html')
+
+<section class="basket">
+  <div class="wrapper">
+    <h3 class="title title_left title_alone title_nomargin">Корзина товаров</h3>
+    <div class="basket__box">
+      <div class="basket__list">
+        <div class="basket__list-check">
+          <input type="checkbox">
+          <button class="btn">Выбрать всё</button>
+        </div>
+        <div class="basket__products">
+          <div class="basket__item">
+            <div class="basket__item-check">
+              <input type="checkbox">
+            </div>
+            <div class="basket__item-pic">
+              <img src="img/16.png" alt="" />
+            </div>
+            <div class="basket__item-title">
+              <a href="#" class="basket__item-title-link">Вибромассажер Satisfyer Lovely Honey</a>
+              <div class="basket__item-title-attr">Цвет: белый, розовый, красный</div>
+            </div>
+
+            <div class="basket__item-counts">
+              <div class="basket__item-toggle">
+                <button class="btn">
+                  <i class="ico ico-minus"></i>
+                </button>
+                <span>1</span>
+                <button class="btn">
+                  <i class="ico ico-plus"></i>
+                </button>
+              </div>
+
+              <div class="basket__item-price">
+                <span class="basket__item-price-new">4530 ₽</span>
+                <s class="basket__item-price-old">5530 ₽</s>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="basket__info">
+        <h2 class="basket__info-title">
+          <span>Итого</span>
+          <span>4530 ₽</span>
+        </h2>
+        <div class="basket__info-data">
+          <div class="basket__info-data-row">
+            <span>Товары, 1 шт.</span>
+            <span>45300 ₽</span>
+          </div>
+          <div class="basket__info-data-row">
+            <span>Скидка</span>
+            <span>45300 ₽</span>
+          </div>
+          <div class="basket__info-data-row">
+            <span>Доставка</span>
+            <span>45300 ₽</span>
+          </div>
+        </div>
+        <h3 class="basket__info-subtitle">
+          <span>Доставка: </span>
+          <span>пункт выдачи</span>
+        </h3>
+        <div class="basket__info-data">
+          <p class="basket__info-data-text">Ежедневно 10:00-14:00 г. Минск, ул. Одесская, 48</p>
+        </div>
+        <h3 class="basket__info-subtitle">
+          <span>Дата: </span>
+          <span>25-27 декабря 2020</span>
+        </h3>
+        <h3 class="basket__info-subtitle">
+          <span>Оплата: </span>
+          <span>картой</span>
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+@@include('parts/footer.html')

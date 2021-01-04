@@ -38,7 +38,7 @@
         transform-origin: center center;
         margin-right: 24px;
 
-        @include mq('phone-wide', 'max') {
+        @include mq('large-small', 'max') {
           margin-right: 0;
         }
       }
@@ -51,15 +51,16 @@
         color: #696969;
         font-family: 'Montserrat', sans-serif;
 
-        @include mq('phone-wide', 'max') {
-
-        }
       }
 
       &-pay{
 
         h3{
           font-size: 21px;
+
+          @include mq('large-small', 'max') {
+            font-size: 18px;
+          }
         }
       }
     }
@@ -80,10 +81,19 @@
         font-family: 'Montserrat', sans-serif;
         color: #696969;
         margin: 0 0 10px;
+
+        @include mq('large-small', 'max') {
+          font-size: 14px;
+        }
       }
 
       img{
-        max-height: 30px;
+        max-height: 40px;
+        margin-top: 10px;
+
+        @include mq('large-small', 'max') {
+
+        }
       }
 
     }

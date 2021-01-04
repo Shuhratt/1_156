@@ -4,6 +4,15 @@ $width_first: 360/1140 * 100%;
   margin-top: 90px;
   margin-bottom: 90px;
 
+  &_page{
+    margin-bottom: 90px;
+
+    @include mq('large-small', 'max') {
+      margin-bottom: 60px;
+    }
+
+  }
+
   &__box{
     display: grid;
     grid-template-columns: $width_first $width_first $width_first;
@@ -38,9 +47,11 @@ $width_first: 360/1140 * 100%;
     flex-direction: column;
     justify-content: space-between;
     min-height: 307px;
+    transition: box-shadow .15s ease-in-out;
 
     &:hover,
     &:active{
+      box-shadow: 0 0 10px rgba(#dbdbdb, .39), 0 0 10px rgba(#dbdbdb, .39);
 
       span{
         color: $base;
