@@ -1,3 +1,125 @@
 .basket {
 
+  &__box{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list{
+    width: 100%;
+    max-width: 750/1140 * 100%;
+
+    &-check{
+      margin-bottom: 43px;
+
+      label{
+        display: flex;
+        align-items: center;
+
+        span{
+          font-size: 16px;
+          color: #b8b8b8;
+          font-weight: bold;
+          font-family: Montserrat, sans-serif;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  &__products{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__item{
+    display: flex;
+
+    &-check{
+
+    }
+
+    &-pic{
+      background-color: $white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 16px rgba(#dbdbdb, .39);
+
+      img{
+        max-height: 100px;
+      }
+    }
+
+    &-title{
+      display: flex;
+      flex-direction: column;
+
+
+      &-link{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+
+      &-attr{
+        border: 1px solid #cbcbcb;
+        border-radius: 5px;
+        font-size: 14px;
+        font-family: Montserrat, sans-serif;
+        color: #cbcbcb;
+        padding: 8px 15px;
+
+      }
+
+    }
+
+    &-toggle{
+      display: flex;
+      align-items: flex-start;
+
+      span{
+        color: #cbcbcb;
+        font-weight: bold;
+        font-family: Montserrat, sans-serif;
+        line-height: 1;
+        font-size: 18px;
+      }
+    }
+
+    &-counts{
+      display: flex;
+    }
+
+    &-price{
+      display: flex;
+      flex-direction: column;
+
+      &-new {
+        font-size: 18px;
+        color: $base;
+        font-weight: bold;
+        font-family: Montserrat, sans-serif;
+      }
+
+      &-old {
+        font-size: 18px;
+        color: #cbcbcb;
+        font-weight: bold;
+        font-family: Montserrat, sans-serif;
+      }
+
+    }
+
+
+  }
+
+  &__info{
+    width: 100%;
+    max-width: 360/1140 * 100%;
+    box-shadow: 0 0 16px rgba(#000000, .1);
+    border-radius: 15px;
+    padding: 70px 45px;
+  }
+
 }
