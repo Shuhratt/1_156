@@ -1,3 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-//@include font-face("TT Prosto Sans", '../fonts/TTProstoSans/TTProstoSans-Regular', 400, normal, eot woff ttf);
+@include font-face("Gotham Pro", '../fonts/GothamPro', normal, normal, eot woff ttf);
+@include font-face("Gotham Pro", '../fonts/GothamPro-Bold', bold, normal, eot woff ttf);

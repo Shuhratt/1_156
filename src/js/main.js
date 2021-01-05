@@ -66,9 +66,22 @@ $(document).ready(function() {
     }))
   }
 
+  $(document).on('click', '.item__tabs-head-link',  function() {
+    var i = $(this).data('link');
+    $('.item__tabs-head-link').removeClass('item__tabs-head-link_active');
+    $(this).addClass('item__tabs-head-link_active');
+    $('.item__tabs-item').hide().removeClass('item__tabs-item_active');
+    $('.item__tabs-item[data-tab="'+ i +'"]').show().addClass('item__tabs-item_active');
+  });
 
+  const itemTitle = $(document).find('.item__title_desktop').text()
+  $('.item__title_mob').text(itemTitle)
 
+  const itemAttr = $(document).find('.item__attr_desktop').html()
+  $('.item__attr_mob').append(itemAttr)
 
+  const itemInfo = $(document).find('.item__info_desktop').html()
+  $('.item__info_mob').append(itemInfo)
 
 
     try {
@@ -92,7 +105,27 @@ $(document).ready(function() {
         arrows: true,
         prevArrow: $('.item__photo-left'),
         nextArrow: $('.item__photo-right'),
-        infinite: false
+        infinite: false,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 5
+            }
+          },
+          {
+            breakpoint: 598,
+            settings: {
+              slidesToShow: 4
+            }
+          },
+          {
+            breakpoint: 468,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+        ]
 
       });
 

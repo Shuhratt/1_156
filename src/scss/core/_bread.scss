@@ -14,13 +14,18 @@ $breadcrumb-active-color: '#7b7b82';
   background-color: transparent;
 
   @include mq('large-small', 'max') {
-      display: none;
+    padding: 20px 0 30px;
   }
 }
 
 .breadcrumb-item {
     margin-right: 4px;
     font-family: Montserrat, sans-serif;
+
+    @include mq('large', 'max') {
+      font-size: 12px;
+      line-height: 19px;
+    }
 
     a {
         display: inline-block;
@@ -29,6 +34,11 @@ $breadcrumb-active-color: '#7b7b82';
         font-size: 14px;
         line-height: 18px;
         font-family: Montserrat, sans-serif;
+
+        @include mq('large', 'max') {
+          font-size: 12px;
+          line-height: 19px;
+        }
     }
 
     + .breadcrumb-item::before {
