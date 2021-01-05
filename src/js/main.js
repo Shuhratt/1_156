@@ -24,6 +24,53 @@ $(document).ready(function() {
     $('html, body').removeClass('hidden');
   });
 
+
+  const checkAll = document.querySelector('.basket__list-check input')
+
+  if(checkAll){
+
+    function checkingAll() {
+      const items = document.querySelectorAll('.basket__item');
+
+      function itemsCheck(el, type) {
+        return el.forEach((item) => item.querySelector('input').checked = type )
+      }
+
+      if (this.checked){
+        itemsCheck(items, true)
+      } else{
+        itemsCheck(items, false)
+      }
+
+    }
+
+    checkAll.addEventListener('click', checkingAll)
+  }
+
+
+  const items = document.querySelectorAll('.basket__item');
+
+  if(items.length > 0){
+    items.forEach((item) => item.querySelector('.btn__minus').addEventListener('click', function () {
+      let num =  this.parentNode.querySelector('span')
+
+      if(num.textContent > 0){
+        num.textContent = Number(num.textContent) - 1
+      }
+
+    }))
+
+    items.forEach((item) => item.querySelector('.btn__plus').addEventListener('click', function () {
+      let num =   this.parentNode.querySelector('span')
+      num.textContent = Number(num.textContent) + 1
+    }))
+  }
+
+
+
+
+
+
     try {
 
       $('.slider-for').slick({
