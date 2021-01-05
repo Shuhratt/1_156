@@ -20,27 +20,102 @@
 
     }
 
+    &-box{
+      position: relative;
+      margin-bottom: 47px;
+    }
 
     &-slider{
 
       .slider-for{
+        margin-bottom: 30px;
+
+        .slick-track{
+          height: 417px;
+        }
 
       }
 
       .slider-nav{
 
+
+        .slick-track{
+
+        }
       }
 
 
       &-item{
 
+
+        img {
+          height: 417px;
+          width: auto;
+          margin: auto;
+          display: block;
+        }
+
+        &-small{
+          background-color: transparent;
+          padding: 10px;
+          border-radius: 10px;
+          border: 1px solid #e0e0e6;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100px;
+          //width: 100px;
+          margin: 0 10px;
+          //min-width: 100px;
+          position: relative;
+          transition: border-color .15s ease, background-color .15s ease-in-out;
+
+          &.slick-current {
+            box-shadow: 0 0 16px rgba(#dbdbdb, .39);
+            border-color: $white;
+            background-color: $white;
+          }
+
+          img{
+            width: auto;
+            height: 100%;
+            margin: auto;
+            display: block;
+            object-fit: cover;
+            //position: absolute;
+            //top: 0;
+            //left: 0;
+            //right: 0;
+            //bottom: 0;
+            max-height: 80px;
+
+          }
+        }
       }
 
+    }
+
+    &-left,
+    &-right{
+      position: absolute;
+      top: 0;
+      bottom: 140px;
+      margin: auto 0;
+      display: block;
+
+      &.slick-disabled{
+        opacity: .2;
+      }
     }
 
     &-left{
       transform: rotate(180deg);
       transform-origin: center center;
+      left: 0;
+    }
+
+    &-right{
+      right: 0;
     }
 
   }
@@ -82,24 +157,14 @@
       line-height: 140%;
     }
 
-    &-small{
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 160%;
-      margin-bottom: 8px;
-      margin-top: 0;
+    &_mob{
 
-      @include mq('large-small', 'max') {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 160%;
-      }
-
-      &_mt{
-        margin-top: 24px;
+      @include mq('large-small', 'min') {
+        display: none;
       }
     }
   }
+
 
   &__text{
     font-weight: 300;
@@ -143,6 +208,13 @@
 
     @include mq('large-small', 'max') {
       padding: 5px 0 15px;
+    }
+
+    &_mob{
+
+      @include mq('large-small', 'min') {
+        display: none;
+      }
     }
 
     &-num{

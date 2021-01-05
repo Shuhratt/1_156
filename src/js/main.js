@@ -79,15 +79,20 @@ $(document).ready(function() {
         arrows: false,
         fade: true,
         asNavFor: '.slider-nav',
-        autoplay: true
+        autoplay: false,
+        adaptiveHeight: true
       });
       $('.slider-nav').slick({
-        slidesToShow: 3,
+        slidesToShow: 6,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
         dots: false,
-        centerMode: true,
-        focusOnSelect: true
+        centerMode: false,
+        focusOnSelect: true,
+        arrows: true,
+        prevArrow: $('.item__photo-left'),
+        nextArrow: $('.item__photo-right'),
+        infinite: false
 
       });
 
