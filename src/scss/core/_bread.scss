@@ -1,7 +1,7 @@
-$breadcrumb-divider: '—';
-$breadcrumb-divider-color: '#000000';
+$breadcrumb-divider: '/';
+$breadcrumb-divider-color: '#7b7b82';
 $breadcrumb-item-padding: '3';
-$breadcrumb-active-color: '#ABABAB';
+$breadcrumb-active-color: '#7b7b82';
 
 .breadcrumb {
   display: flex;
@@ -9,7 +9,7 @@ $breadcrumb-active-color: '#ABABAB';
   align-items: center;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 0 0 15px;
+  padding: 40px 0 70px;
   list-style: none;
   background-color: transparent;
 
@@ -19,20 +19,22 @@ $breadcrumb-active-color: '#ABABAB';
 }
 
 .breadcrumb-item {
-    margin-right: 5px;
+    margin-right: 4px;
+    font-family: Montserrat, sans-serif;
 
     a {
         display: inline-block;
         color: #{$breadcrumb-divider-color};
-        font-weight: 300;
+        font-weight: 400;
         font-size: 14px;
         line-height: 18px;
+        font-family: Montserrat, sans-serif;
     }
 
     + .breadcrumb-item::before {
         display: inline-block;
-        padding-right: 5px;
-        padding-left: #{$breadcrumb-item-padding}px;
+        padding-right: 4px;
+        padding-left: 0;
         color: #{$breadcrumb-divider-color};
         content: "#{$breadcrumb-divider}";
 
