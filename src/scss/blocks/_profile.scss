@@ -1,0 +1,136 @@
+.profile{
+
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0;
+
+    @include mq('large-small', 'max') {
+      margin: 60px 0;
+      flex-direction: column;
+    }
+  }
+
+  &__sidebar{
+    width: 100%;
+    max-width: 292/1140 * 100%;
+
+    @include mq('large-small', 'max') {
+      max-width: 100%;
+    }
+
+    nav{
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-link{
+      font-size: 16px;
+      padding: 21px 0;
+      line-height: 1;
+      font-family: 'Montserrat', sans-serif;
+      border-bottom: 1px solid #d6d5e3;
+      color: #696969;
+      font-weight: 500;
+      position: relative;
+
+      &:first-child{
+        border-top: 1px solid #d6d5e3;
+      }
+
+      &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -5px;
+        bottom: 0;
+        border: 5px solid transparent;
+        border-left: 5px solid $base;
+        display: inline-block;
+        margin: auto 0;
+        height: 10px;
+
+      }
+      &_active,
+      &:hover{
+        color: $base;
+      }
+    }
+  }
+
+  &__content{
+    width: 100%;
+    max-width: 780/1140 * 100%;
+
+    @include mq('large-small', 'max') {
+      max-width: 100%;
+      margin-top: 60px;
+    }
+
+    &-title{
+      font-size: 24px;
+      margin: 0 0 23px;
+    }
+  }
+
+  &__data{
+    border: 1px solid #d6d5e3;
+    border-radius: 30px;
+    padding: 37px 40px;
+    width: 100%;
+    max-width: 554px;
+
+    @include mq('large-small', 'max') {
+      padding: 30px;
+    }
+
+    &-row{
+      display: flex;
+
+      @include mq('large-small', 'max') {
+        flex-direction: column;
+      }
+
+      &:not(:last-child){
+        margin-bottom: 20px;
+      }
+
+      span{
+        font-size: 16px;
+        line-height: 1;
+        font-family: 'Montserrat', sans-serif;
+        color: #7b7b82;
+
+        &:first-child{
+          width: 100%;
+          max-width: 180px;
+
+          @include mq('large-small', 'max') {
+            max-width: 100%;
+            margin-bottom: 5px;
+          }
+        }
+
+        &:last-child{
+
+        }
+
+      }
+    }
+
+    &-link{
+      font-size: 16px;
+      line-height: 1;
+      font-family: 'Montserrat', sans-serif;
+      color: $base;
+      text-decoration: underline;
+      display: inline-block;
+      margin-top: 9px;
+
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+
+}

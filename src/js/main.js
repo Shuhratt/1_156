@@ -71,7 +71,7 @@ $(document).ready(function() {
     $('.item__tabs-head-link').removeClass('item__tabs-head-link_active');
     $(this).addClass('item__tabs-head-link_active');
     $('.item__tabs-item').hide().removeClass('item__tabs-item_active');
-    $('.item__tabs-item[data-tab="'+ i +'"]').show().addClass('item__tabs-item_active');
+    $(`.item__tabs-item[data-tab="${i}"]`).show().addClass('item__tabs-item_active');
   });
 
   const itemTitle = $(document).find('.item__title_desktop').text()
