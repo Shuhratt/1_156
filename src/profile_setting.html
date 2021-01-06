@@ -1,0 +1,69 @@
+@@include('parts/header.html')
+
+<section class="profile">
+  <div class="wrapper">
+    <div class="profile__box">
+      <div class="profile__sidebar">
+        <nav>
+          <a href="#" class="profile__sidebar-link profile__sidebar-link_active">Мои заказы</a>
+          <a href="#" class="profile__sidebar-link">Корзина</a>
+          <a href="#" class="profile__sidebar-link">Мой профиль</a>
+          <a href="#" class="profile__sidebar-link">Настройки</a>
+        </nav>
+      </div>
+      <div class="profile__content">
+        <div class="profile__setting">
+          <div class="profile__col">
+            <form action="">
+              <h2 class="profile__content-title">Настройки</h2>
+              <div class="profile__input">
+                <span class="profile__input-text">Ф.И.О:</span>
+                <input type="text" class="form-control" value="" required aria-required="true">
+              </div>
+              <div class="profile__input">
+                <span class="profile__input-text">Адрес доставки:</span>
+                <input type="text" class="form-control" value="" required aria-required="true">
+              </div>
+              <div class="profile__input">
+                <span class="profile__input-text">Телефон:</span>
+                <input type="tel" class="form-control" value="" required aria-required="true">
+              </div>
+              <div class="profile__input">
+                <span class="profile__input-text">E-mail:</span>
+                <input type="email" class="form-control" value="" required aria-required="true">
+              </div>
+              <button type="submit" class="btn profile__data-link">Сохранить изменения</button>
+            </form>
+          </div>
+          <div class="profile__col">
+            <form action="">
+              <h2 class="profile__content-title">Изменить пароль</h2>
+              <div class="profile__input">
+                <span class="profile__input-text">E-mail:</span>
+                <input type="email" class="form-control" value="" required aria-required="true">
+              </div>
+              <div class="profile__input">
+                <span class="profile__input-text">Текущий пароль:</span>
+                <input type="password" class="form-control" value="" required aria-required="true">
+              </div>
+              <div class="profile__input">
+                <span class="profile__input-text">Новый пароль:</span>
+                <input type="password" class="form-control" value="" required aria-required="true">
+              </div>
+              <div class="profile__input">
+                <span class="profile__input-text">Повторите текущий пароль:</span>
+                <input type="password" class="form-control" value="" required aria-required="true">
+              </div>
+
+              <button type="submit" class="btn profile__data-link">Сохранить изменения</button>
+            </form>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+@@include('parts/footer.html')
