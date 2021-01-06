@@ -75,68 +75,33 @@
 
 <section class="profile">
   <div class="wrapper">
-    <div class="profile__box">
-      <div class="profile__sidebar">
-        <nav>
-          <a href="#" class="profile__sidebar-link profile__sidebar-link_active">Мои заказы</a>
-          <a href="#" class="profile__sidebar-link">Корзина</a>
-          <a href="#" class="profile__sidebar-link">Мой профиль</a>
-          <a href="#" class="profile__sidebar-link">Настройки</a>
-        </nav>
-      </div>
-      <div class="profile__content profile__content-small">
-        <h2 class="profile__content-title profile__content-title-large">Мои заказы</h2>
-        <div class="profile__order">
-          <div class="profile__order-head">
-            <span class="profile__order-head-name">Товар</span>
-            <span class="profile__order-head-num">Трек номер</span>
-            <span class="profile__order-head-status">Статус:</span>
+    <div class="profile__pay">
+      <h2 class="profile__content-title profile__content-title-large">Оплата заказа</h2>
+      <div class="profile__pay-box">
+        <form action="">
+          <h3 class="profile__pay-num">Заказ №: 1234567913213213</h3>
+          <p class="profile__pay-price">К оплате: <span>4530 ₽</span></p>
+          <div class="profile__pay-row">
+            <span>Способ оплаты:</span>
+            <select name="" id="" >
+              <option value="0">Банковской картой</option>
+              <option value="0">Банковской картой 2</option>
+              <option value="0">Банковской картой 3</option>
+            </select>
           </div>
-          <div class="profile__order-products">
-            <div class="profile__order-item">
-              <div class="profile__order-item-photo">
-                <img src="img/5.png" alt="" />
-              </div>
-              <div class="profile__order-item-info">
-                <div class="profile__order-item-text">
-                  <a href="#" class="profile__order-item-title">Вибромассажер Satisfyer Lovely Honey</a>
-                  <div class="profile__order-item-art" >Артикул; J2018-57-2</div>
-                  <div class="profile__order-item-price">4530 ₽</div>
-                </div>
-                <div class="profile__order-item-num" data-text="Трек номер:">1234567913213213</div>
-                <div class="profile__order-item-status" data-text="Статус:">Отправлен</div>
-              </div>
+          <div class="profile__pay-row">
+            <input type="text" class="form-control" id="card" placeholder="0000 0000 0000 0000" aria-required="true" required />
+          </div>
+          <div class="profile__pay-row">
+            <div class="profile__pay-col">
+              <input type="text" class="form-control" id="date" placeholder="ММ/ГГ"aria-required="true" required/>
             </div>
-            <div class="profile__order-item">
-              <div class="profile__order-item-photo">
-                <img src="img/5.png" alt="" />
-              </div>
-              <div class="profile__order-item-info">
-                <div class="profile__order-item-text">
-                  <a href="#" class="profile__order-item-title">Вибромассажер Satisfyer Lovely Honey</a>
-                  <div class="profile__order-item-art" >Артикул; J2018-57-2</div>
-                  <div class="profile__order-item-price">4530 ₽</div>
-                </div>
-                <div class="profile__order-item-num" data-text="Трек номер:">1234567913213213</div>
-                <div class="profile__order-item-status" data-text="Статус:">Доставлен</div>
-              </div>
-            </div>
-            <div class="profile__order-item">
-              <div class="profile__order-item-photo">
-                <img src="img/5.png" alt="" />
-              </div>
-              <div class="profile__order-item-info">
-                <div class="profile__order-item-text">
-                  <a href="#" class="profile__order-item-title">Вибромассажер Satisfyer Lovely Honey</a>
-                  <div class="profile__order-item-art" >Артикул; J2018-57-2</div>
-                  <div class="profile__order-item-price">4530 ₽</div>
-                </div>
-                <div class="profile__order-item-num" data-text="Трек номер:">1234567913213213</div>
-                <div class="profile__order-item-status" data-text="Статус:">Ожидание</div>
-              </div>
+            <div class="profile__pay-col">
+              <input type="text" class="form-control" id="cvc" placeholder="CVC" aria-required="true" required/>
             </div>
           </div>
-        </div>
+          <button  type="submit" class="btn btn-primary">ОПЛАТИТЬ <span>4530 ₽</span></button>
+        </form>
       </div>
     </div>
   </div>

@@ -250,17 +250,21 @@
 
       &-photo {
         background-color: $white;
-        padding: 10px;
+        padding: 6px;
         border-radius: 10px;
         box-shadow: 0 0 16px rgba(#dbdbdb, .39);
         width: 100%;
         max-width: 77px;
         margin-right: 20px;
+        max-height: 77px;
+
 
         img{
-          max-height: 77px;
+          max-height: 65px;
           margin: 0 auto;
           display: block;
+          height: 100%;
+          width: auto;
         }
       }
 
@@ -289,6 +293,7 @@
         font-size: 14px;
         margin-bottom: 10px;
         font-weight: bold;
+        margin-top: 2px;
       }
 
       &-art {
@@ -302,7 +307,7 @@
         font-weight: bold;
         color: $base;
         font-family: 'Montserrat', sans-serif;
-        margin-top: auto;
+        margin-top: 14px;
       }
 
       &-num {
@@ -317,6 +322,17 @@
 
         @include mq('large-small', 'max') {
           max-width: 100%;
+          justify-content: flex-start;
+          margin-top: 20px;
+
+          &:before{
+            content: attr(data-text);
+            display: inline-block;
+            font-size: 14px;
+            color: $base;
+            margin-right: 5px;
+
+          }
         }
       }
 
@@ -332,9 +348,32 @@
 
         @include mq('large-small', 'max') {
           max-width: 100%;
+          justify-content: flex-start;
+          margin-top: 20px;
+
+          &:before{
+            content: attr(data-text);
+            display: inline-block;
+            font-size: 14px;
+            color: $base;
+            margin-right: 5px;
+
+          }
+
         }
       }
 
     }
+  }
+
+
+  &__pay{
+
+    margin: 100px 0;
+
+    @include mq('large-small', 'max') {
+      margin: 60px 0;
+    }
+
   }
 }

@@ -1,0 +1,37 @@
+@@include('parts/header.html')
+
+<section class="profile">
+  <div class="wrapper">
+    <div class="profile__pay">
+      <h2 class="profile__content-title profile__content-title-large">Оплата заказа</h2>
+      <div class="profile__pay-box">
+        <form action="">
+          <h3 class="profile__pay-num">Заказ №: 1234567913213213</h3>
+          <p class="profile__pay-price">К оплате: <span>4530 ₽</span></p>
+          <div class="profile__pay-row">
+            <span>Способ оплаты:</span>
+            <select name="" id="" >
+              <option value="0">Банковской картой</option>
+              <option value="0">Банковской картой 2</option>
+              <option value="0">Банковской картой 3</option>
+            </select>
+          </div>
+          <div class="profile__pay-row">
+            <input type="text" class="form-control" id="card" placeholder="0000 0000 0000 0000" aria-required="true" required />
+          </div>
+          <div class="profile__pay-row">
+            <div class="profile__pay-col">
+              <input type="text" class="form-control" id="date" placeholder="ММ/ГГ"aria-required="true" required/>
+            </div>
+            <div class="profile__pay-col">
+              <input type="text" class="form-control" id="cvc" placeholder="CVC" aria-required="true" required/>
+            </div>
+          </div>
+          <button  type="submit" class="btn btn-primary">ОПЛАТИТЬ <span>4530 ₽</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+@@include('parts/footer.html')
