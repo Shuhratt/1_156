@@ -25,7 +25,7 @@
     @include mq('large-small', 'max') {
       width: 100%;
       max-width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
   }
 
@@ -43,6 +43,7 @@
       font-weight: 500;
       font-family: 'Montserrat', sans-serif;
       font-style: normal;
+      color: #696969;
     }
 
   }
@@ -68,6 +69,7 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 500;
       margin-right: auto;
+      color: #696969;
 
       @include mq('large-small', 'max') {
         margin-right: 0;
@@ -96,6 +98,10 @@
     font-size: 14px;
     font-weight: 500;
     color: #696969;
+
+    @include mq('large-small', 'max') {
+      display: none;
+    }
   }
 
   &__menu{
@@ -126,6 +132,7 @@
 
     @include mq('large-small', 'max') {
       justify-content: flex-start;
+      display: none;
     }
 
     img{
@@ -147,5 +154,40 @@
     }
   }
 
+
+  &__mob{
+
+    &-copy{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #696969;
+
+      @include mq('large-small', 'min') {
+        display: none;
+      }
+
+    }
+
+    &-pay{
+      @include mq('large-small', 'min') {
+        display: none;
+      }
+
+      img{
+        max-height: 30px;
+        margin: 0 10px 10px 0;
+
+        &:first-child{
+          position: relative;
+          top: -5px;
+        }
+
+        &:last-child{
+          padding-left: 10px;
+        }
+      }
+    }
+  }
 
 }

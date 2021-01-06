@@ -90,6 +90,11 @@ $(document).ready(function() {
     $('.header__menu').append(el)
   })
 
+  const footerPay = $(document).find('.footer__pay').html()
+  $('.footer__mob-pay').append(footerPay)
+
+  const footerCopy = $(document).find('.footer__copy').html()
+  $('.footer__mob-copy').append(footerCopy)
 
     try {
 
