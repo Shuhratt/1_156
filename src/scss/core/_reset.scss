@@ -97,38 +97,35 @@ a {
 }
 
 select {
-  background-image: url('../img/icons/sprite.svg#arrow_down2');
+  background-image: url("data:image/svg+xml,%3Csvg width='201' height='174' viewBox='0 0 201 174' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M100.5 174L0.474075 0.749981L200.526 0.749999L100.5 174Z' fill='%23BF3CB0'/%3E%3C/svg%3E%0A");
   background-position: 96% center;
   background-repeat: no-repeat;
-  background-size: 10px 10px;
+  background-size: 10px 5px;
   outline: 0;
   cursor: pointer;
-  text-indent: rem(0.01px);
   appearance: none !important;
-  font-family: inherit;
   background-color: #fff;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  width: auto;
-  max-width: min-content;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 23px;
+  border: 1px solid #d6d5e3;
+  border-radius: 10px;
+  width: 100%;
   color: #64626a;
   white-space: nowrap;
   position: relative;
   text-overflow: ellipsis;
   overflow: hidden;
+  height: 50px;
+  padding: 0 20px;
   transition: background 0.25s, color 0.25s, border 0.25s, box-shadow 0.15s;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
 
-  @media all and (max-width: 767px) {
-    font-size: rem(14px);
+  @include mq('phone-wide', 'max') {
+    font-size: rem(10px);
   }
 
   &:focus,
   &:active:focus {
-    //box-shadow: 0 0 0 0.2rem rgba(#0C6AA8, .5);
+    box-shadow: 0 0 0 0.1rem rgba(#bf3cb0, .5);
   }
 
   &::-ms-expand {

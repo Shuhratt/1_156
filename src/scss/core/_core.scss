@@ -295,7 +295,7 @@ b {
 }
 
 .form-control {
-  box-shadow: none !important;
+  box-shadow: none ;
   border: 1px solid #d6d5e3;
   background-color: transparent;
   font-weight: 300;
@@ -305,7 +305,7 @@ b {
   height: 64px;
   outline: 0;
   border-radius: 50px;
-  transition: border-color 0.15s ease-in;
+  transition: background 0.25s, color 0.25s, border-color 0.25s, box-shadow 0.15s;
   width: 100%;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
@@ -337,8 +337,8 @@ b {
   }
 
   &:focus,
-  &:active {
-    border-color: #d6d5e3;
+  &:active:focus {
+    box-shadow: 0 0 0 0.1rem rgba($base, .5);
   }
 
   // &--error{
@@ -421,7 +421,7 @@ b {
 
   &:focus,
   &:active {
-    //border-color: #239AD6;
+    border-color: $base;
   }
 
   //&--error{
