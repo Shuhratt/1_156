@@ -58,6 +58,24 @@
         }
       }
     }
+
+    &-link{
+
+      &-for-mob{
+        @include mq('large-small', 'max') {
+          display: block!important;
+          color: $white;
+          text-align: center;
+          padding: 10px 0;
+
+          &:hover,
+          &:active{
+            color: $white;
+          }
+
+        }
+      }
+    }
   }
 
   &__logo{
@@ -98,9 +116,71 @@
 
     @include mq('large-small', 'min') {
       display: none;
+    }
 
+    svg{
+      position: relative;
 
+      rect{
+        display: block;
+        transition: transform .15s ease-in;
+        -webkit-perspective: 900000px;
+        perspective: 900000px;
+        transform: rotate(0);
+      }
+    }
+
+    &.active{
+
+      svg{
+
+        rect{
+
+          &:nth-child(1){
+            transform: rotate(45deg) translate(0, 0);
+            transform-origin: 0 0;
+            width: 76px;
+          }
+
+          &:nth-child(2){
+            display: none;
+          }
+
+          &:nth-child(3){
+            transform: rotate(-45deg) translate(2px, 13px);
+            transform-origin: 0 100%;
+            width: 76px;
+          }
+        }
+      }
     }
   }
+
+
+  &__menu{
+    @include mq('large-small', 'max') {
+      flex-direction: column;
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 91px;
+      bottom: 0;
+      background: $base;
+      z-index: 99999;
+      max-height: calc(100vh - 91px);
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      flex: 1 0 auto;
+      padding: 20px;
+
+      &.active{
+        display: flex;
+
+      }
+    }
+  }
+
 
 }

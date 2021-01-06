@@ -8,15 +8,47 @@
 
 .products {
 
+  &__rel{
+    position: relative;
+  }
+
   &__box{
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
 
-    @include mq('large-small', 'max') {
-      flex-direction: column;
-      align-items: center;
-      margin: 0;
+    .product{
+      margin-bottom: 10px;
+    }
+
+    &-left,
+    &-right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      display: block;
+
+      &.slick-disabled{
+        opacity: .2;
+        cursor: default;
+      }
+    }
+
+    &-left {
+      transform: rotate(180deg);
+      transform-origin: center center;
+      left: -20px;
+
+      @include mq('large-small', 'max') {
+        left: 5px;
+      }
+    }
+
+    &-right {
+      right: -20px;
+
+      @include mq('large-small', 'max') {
+        right: 5px;
+      }
     }
 
   }

@@ -94,7 +94,7 @@ function copyFonts (){
 }
 
 function copyLibs (){
-    return src('src/js/libs/*.js')
+    return src('src/js/libs/**/**/*')
       .pipe(copy())
       .pipe(dest('dist/js'))
 }
