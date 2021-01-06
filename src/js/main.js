@@ -85,8 +85,7 @@ $(document).ready(function() {
   const itemInfo = $(document).find('.item__info_desktop').html()
   $('.item__info_mob').append(itemInfo)
 
-  const linksMob = $(document).find('.header__box-link-for-mob')
-  console.log(linksMob)
+  const linksMob = $(document).find('.header__box-link-for-mob').clone()
   linksMob.each((item, el) => {
     $('.header__menu').append(el)
   })
@@ -170,7 +169,7 @@ $(document).ready(function() {
             ]
         });
 
-      $('.products__box').slick({
+      $('.products__box:not(.not-slide)').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         dots: false,

@@ -62,8 +62,8 @@
     &-link{
 
       &-for-mob{
+
         @include mq('large-small', 'max') {
-          display: block!important;
           color: $white;
           text-align: center;
           padding: 10px 0;
@@ -158,26 +158,30 @@
 
 
   &__menu{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 91px;
+    bottom: 0;
+    background: $base;
+    z-index: 99999;
+    max-height: calc(100vh - 91px);
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1 0 auto;
+    padding: 20px;
+
     @include mq('large-small', 'max') {
-      flex-direction: column;
-      display: none;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 91px;
-      bottom: 0;
-      background: $base;
-      z-index: 99999;
-      max-height: calc(100vh - 91px);
-      height: 100%;
-      overflow-y: auto;
-      overflow-x: hidden;
-      flex: 1 0 auto;
-      padding: 20px;
 
       &.active{
         display: flex;
 
+        .header__box-link-for-mob{
+          display: block;
+        }
       }
     }
   }
